@@ -12,7 +12,8 @@ import React from 'react' // 필수
 
 
 ##  ✔ Component 
-: HTML을 반환하는 함수
+- HTML을 반환하는 함수
+- 대문자로 시작해야 정보를 보낼 수 있다.  
 
 ```js
 <App />
@@ -20,9 +21,11 @@ import React from 'react' // 필수
 
 <!-- HTML과 javascript 사이의 조합을 jsx라 부른다.  -->
 ## ✔ jsx
-: jacascript 안에 있는 HTML
+- jacascript 안에 있는 HTML ( HTML+ jacascript)
+- component에 정보를 보낼 수 있다.
 
-
+## ✔ props 
+- 컴포넌트 끼리 값을 전달하는 수단
 ___
 
 
