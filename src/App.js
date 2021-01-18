@@ -1,24 +1,20 @@
 import React from 'react';
-// import Malatang from './Malatang';
+import PropTypes from 'prop-types';
+
+// class Component
+class App extends React.Component {
+  state = {
+    count :0  
+  };
 
 
- function Food({ favorite, imt }){
-  //  console.log(favorite);
-    return <h2>我喜欢{favorite}{imt}</h2>;
- }
-
-function App() {
-  return  (
-    <div>
-      <h1>안녕</h1>
-      <Food favorite="malatang" imt="🥣"/> {/** Food componenet에 정보를 보내는 방법  */} 
-      <Food favorite="naicha" imt="🧃"/>
-      <Food favorite="coffee" imt="☕"/>
-      <Food favorite="beer" imt="🍺" />
+  render(){
+    return(<div>
+      <h1> 숫자가 변한다 바로 {this.state.count} 으로!  </h1>
     </div>
-
-      
-    );
+  )}
 }
+
+
 
 export default App;
