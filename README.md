@@ -50,7 +50,7 @@ ___
 
 
 ### 1. Error
-Malatang.js
+
 <img src='./src/Failed1.png'>
 
 > 리액트 어플리케이션은 하나(&lt;App /&gt;)의 컴포넌트만을 렌더링 해야하기 떄문에 마라탕은 에러 💥
