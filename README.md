@@ -66,7 +66,7 @@ ___
 즉, 모든 react의 element들은 유일해야한다.
 근데 list안으로 집어 넣을때 유일성을 잃어버림 
 
-### 1.1 Solution
+### 2.1 Solution
 > item들에게 각각 id 주기 -> 컴포넌트에 prop(key)을 주기  
 
     
