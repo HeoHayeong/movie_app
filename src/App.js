@@ -1,20 +1,60 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import axios from 'axios';
+import Movie from './Movie';
+import './App.css';
 
-// class Component
-class App extends React.Component {
+class App extends React.Component{
+
   state = {
-    count :0  
+    isLoading: true,
+    movies : []
   };
 
+  getMovies = async () =>{
+    const {
+      data: {
+        data: {
+          movies
+        }
+      }
+    } = await axios.get("https://yts.mx/api/v2/list_movies.json?sort_by=rating");
+    // console.log(movies);
+    // this.setState({movies:movies}) 
+        //        state의 무비 , axios(api)의 무비 
+    this.setState({ movies, isLoading : false }) // 이렇게 가능 
+  }
 
-  render(){
-    return(<div>
-      <h1> 숫자가 변한다 바로 {this.state.count} 으로!  </h1>
-    </div>
-  )}
+  componentDidMount(){
+    this.getMovies();
+  }
+  
+
+  render() { 
+    const { isLoading, movies } = this.state;
+    return (
+      <section className="container">
+        {isLoading ? (
+          <div className="loader">
+            <span className="loader__text">Loading...</span>
+          </div>
+        ) : (
+          <div className="movies">
+            {movies.map(movie => (
+              <Movie 
+                key={movie.id}
+                id={movie.id} 
+                year={movie.year} 
+                title={movie.title} 
+                summary={movie.summary} 
+                poster={movie.medium_cover_image}
+                genres={movie.genres}
+                />
+            ))}
+          </div>
+        )}
+      </section>
+    );
+  }
 }
-
-
 
 export default App;

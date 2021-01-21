@@ -33,6 +33,14 @@ class App extends React.Component {} // class 컴포넌트
 ## ✔ state
 - object
 - 쓰는 이유 : 컴포넌트의 데이터를 넣을 곳간이 있고 그 데이터는 동적인(변하는) 데이터 
+```js
+    //         클릭했을때 호출
+    <button onClick={this.add}>➕</button>
+    //               this.add() ← 이거는 즉시 호출
+```
+
+## ✔ setState
+- setState을 호출할때마다 리액트는 다시 render한다.
 
 
 ## ✔ map()
@@ -40,7 +48,19 @@ class App extends React.Component {} // class 컴포넌트
 - map이 하는것은 rendering
 - map은 array의 각 item에서 function을 실행하는 array를 가지는 
 javascript function이며 그 function의 result를 갖는 array를 나에게 줌 
+
+
+## ✔ function
+1. mounting 
+2. updating : 업데이트
+3. unmounting : component가 죽는걸 의미 (페이지를 바꿀때 ...)
+4. 
+
+4.
 ___
+
+
+
 
 > ####  👁‍🗨 내가 전달받은 props가 내가 원하는 props인지 확인하기 👁‍🗨
      npm i prop-types 
